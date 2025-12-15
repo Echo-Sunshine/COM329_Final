@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Observations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="dist/leaflet.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<div id="map" style="height: 600px;"></div>
+
+<div id="info-panel">
+    <h2>House Cat Occurrences</h2>
+    <p>Click a hexagon to see details.</p>
+
+    <hr>
+
+    <div id="hex-info">
+        <p>No hex selected.</p>
+
+        <div id="legend">
+            <div class="legend-title">Observation Density</div>
+            <div class="legend-bar"></div>
+            <div class="legend-labels">
+                <span>Low</span>
+                <span>High</span>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="project-info">
+        <p><strong>Data:</strong> GBIF Occurrence Dataset</p>
+        <p><strong>Species:</strong> <em>Felis catus</em></p>
+        <p><strong>Created by:</strong> Sunshine and Tamar </p>
+        <p><strong>Encoding:</strong> Hexagon color represents the number of cat observations
+            per area for the selected year. Lighter colors indicate lower density; darker brown
+            indicates higher density.
+        </p>
+
+    </div>
+</div>
+
+<div id="slider-container">
+    <label for="yearSlider">Year: <span id="yearLabel"></span></label>
+    <input type="range" id="yearSlider" step="1">
+</div>
+
+<script src="d3.v7.min.js"></script>
+<script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
+<script src="dist/leaflet.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
