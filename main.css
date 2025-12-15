@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#map {
+    height: 600px;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Floating Info Panel */
+#info-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 280px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: sans-serif;
+    font-size: 13px;
+    z-index: 1000;
+}
+
+#info-panel h2 {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+#info-panel hr {
+    margin: 8px 0;
+}
+
+#hex-info {
+    font-size: 12px;
+}
+
+/* Slider */
+#slider-container {
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#yearSlider {
+    width: 100%;
+}
+
+.leaflet-svg-overlay,
+.leaflet-svg-overlay svg {
+    pointer-events: auto;
+}
+
+.hex {
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.leaflet-overlay-pane svg {
+    z-index: 400;
+}
+
+
+/* Color Legend */
+#legend {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.legend-title {
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.legend-bar {
+    height: 12px;
+    width: 100%;
+    background: linear-gradient(
+            to right,
+            white,
+            #8B4513
+    );
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+
+.legend-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+
+
+
